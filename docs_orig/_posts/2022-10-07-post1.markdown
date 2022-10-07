@@ -1,0 +1,6 @@
+---
+layout: post
+title:  "TEST POST"
+author: Guangzheng Zhang
+---
+Content of Post
