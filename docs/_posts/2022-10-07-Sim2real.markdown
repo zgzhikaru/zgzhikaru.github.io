@@ -1,0 +1,33 @@
+---
+layout: post
+usemathjax: true
+title:  "Sim-to-Real problem of Reinforcement Learning"
+author: Guangzheng Zhang
+---
+
+## Introduction
+Content of Post
+
+
+## Dynamics Uncertainty / Model Mispecification Problem
+
+## Approaches
+
+### Robust MDP
+
+A line of classical works has been dealing with the dynamics uncertainty problem under a robust optimization/robust control. 
+
+Two representative works are
+* [Robust Dynamic Programming](https://pubsonline.informs.org/doi/abs/10.1287/moor.1040.0129)
+* [Robust Control of Markov Decision Processes with Uncertain Transition Matrices](https://pubsonline.informs.org/doi/abs/10.1287/opre.1050.0216)
+
+### Robust Adversarial Reinforcement Learning
+
+Formulating the environment adversary as a competing agent. 
+
+The representative work is
+* [Robust Adversarial Reinforcement Learning](https://arxiv.org/abs/1703.02702)
+
+### Meta-Learning
+
+### Model-based RL

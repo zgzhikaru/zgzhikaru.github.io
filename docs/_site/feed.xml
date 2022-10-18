@@ -1,136 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T17:51:41+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">My Example Post</title><link href="http://localhost:4000/2016/05/20/my-example-post.html" rel="alternate" type="text/html" title="My Example Post" /><published>2016-05-20T00:00:00+08:00</published><updated>2016-05-20T00:00:00+08:00</updated><id>http://localhost:4000/2016/05/20/my-example-post</id><content type="html" xml:base="http://localhost:4000/2016/05/20/my-example-post.html">&lt;p&gt;Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-18T17:00:54+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Guangzheng’s Research Blogs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>Guangzheng Zhang</name><email>zgzhikaru97@gmail.com</email></author><entry><title type="html">Sim-to-Real problem of Reinforcement Learning</title><link href="http://localhost:4000/2022/10/07/Sim2real.html" rel="alternate" type="text/html" title="Sim-to-Real problem of Reinforcement Learning" /><published>2022-10-07T00:00:00+08:00</published><updated>2022-10-07T00:00:00+08:00</updated><id>http://localhost:4000/2022/10/07/Sim2real</id><content type="html" xml:base="http://localhost:4000/2022/10/07/Sim2real.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Content of Post&lt;/p&gt;
 
-&lt;p&gt;No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.&lt;/p&gt;</content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html">Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.</summary></entry><entry><title type="html">Some articles are just so long they deserve a really long title to see if things will break well</title><link href="http://localhost:4000/misc/2016/05/20/super-long-article.html" rel="alternate" type="text/html" title="Some articles are just so long they deserve a really long title to see if things will break well" /><published>2016-05-20T00:00:00+08:00</published><updated>2016-05-20T00:00:00+08:00</updated><id>http://localhost:4000/misc/2016/05/20/super-long-article</id><content type="html" xml:base="http://localhost:4000/misc/2016/05/20/super-long-article.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+&lt;h2 id=&quot;dynamics-uncertainty--model-mispecification-problem&quot;&gt;Dynamics Uncertainty / Model Mispecification Problem&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+&lt;h2 id=&quot;approaches&quot;&gt;Approaches&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;</content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="misc" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</summary></entry><entry><title type="html">This post demonstrates post content styles</title><link href="http://localhost:4000/junk/2016/05/20/this-post-demonstrates-post-content-styles.html" rel="alternate" type="text/html" title="This post demonstrates post content styles" /><published>2016-05-20T00:00:00+08:00</published><updated>2016-05-20T00:00:00+08:00</updated><id>http://localhost:4000/junk/2016/05/20/this-post-demonstrates-post-content-styles</id><content type="html" xml:base="http://localhost:4000/junk/2016/05/20/this-post-demonstrates-post-content-styles.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
+&lt;h3 id=&quot;robust-mdp&quot;&gt;Robust MDP&lt;/h3&gt;
 
-&lt;h2 id=&quot;some-great-heading-h2&quot;&gt;Some great heading (h2)&lt;/h2&gt;
+&lt;p&gt;A line of classical works has been dealing with the dynamics uncertainty problem under a robust optimization/robust control.&lt;/p&gt;
 
-&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.&lt;/p&gt;
-
-&lt;p&gt;Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
-
-&lt;h2 id=&quot;another-great-heading-h2&quot;&gt;Another great heading (h2)&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
-
-&lt;h3 id=&quot;some-great-subheading-h3&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
-
-&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.&lt;/p&gt;
-
-&lt;p&gt;Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;
-
-&lt;h3 id=&quot;some-great-subheading-h3-1&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
-
-&lt;p&gt;Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This quote will &lt;em&gt;change&lt;/em&gt; your life. It will reveal the &lt;i&gt;secrets&lt;/i&gt; of the universe, and all the wonders of humanity. Don’t &lt;em&gt;misuse&lt;/em&gt; it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.&lt;/p&gt;
-
-&lt;h3 id=&quot;some-great-subheading-h3-2&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
-
-&lt;p&gt;Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Hello, World!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;h4 id=&quot;you-might-want-a-sub-subheading-h4&quot;&gt;You might want a sub-subheading (h4)&lt;/h4&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;h4 id=&quot;but-its-probably-overkill-h4&quot;&gt;But it’s probably overkill (h4)&lt;/h4&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;h5 id=&quot;could-be-a-smaller-sub-heading-pacman-h5&quot;&gt;Could be a smaller sub-heading, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pacman&lt;/code&gt; (h5)&lt;/h5&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;h6 id=&quot;small-yet-significant-sub-heading--h6&quot;&gt;Small yet significant sub-heading  (h6)&lt;/h6&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
-&lt;h3 id=&quot;oh-hai-an-unordered-list&quot;&gt;Oh hai, an unordered list!!&lt;/h3&gt;
-
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
-
+&lt;p&gt;Two representative works are&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;First item, yo&lt;/li&gt;
-  &lt;li&gt;Second item, dawg&lt;/li&gt;
-  &lt;li&gt;Third item, what what?!&lt;/li&gt;
-  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/moor.1040.0129&quot;&gt;Robust Dynamic Programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/opre.1050.0216&quot;&gt;Robust Control of Markov Decision Processes with Uncertain Transition Matrices&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;oh-hai-an-ordered-list&quot;&gt;Oh hai, an ordered list!!&lt;/h3&gt;
+&lt;h3 id=&quot;robust-adversarial-reinforcement-learning&quot;&gt;Robust Adversarial Reinforcement Learning&lt;/h3&gt;
 
-&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+&lt;p&gt;Formulating the environment adversary as a competing agent.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;First item, yo&lt;/li&gt;
-  &lt;li&gt;Second item, dawg&lt;/li&gt;
-  &lt;li&gt;Third item, what what?!&lt;/li&gt;
-  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;The representative work is&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.02702&quot;&gt;Robust Adversarial Reinforcement Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;headings-are-cool-h2&quot;&gt;Headings are cool! (h2)&lt;/h2&gt;
+&lt;h3 id=&quot;meta-learning&quot;&gt;Meta-Learning&lt;/h3&gt;
 
-&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+&lt;h3 id=&quot;model-based-rl&quot;&gt;Model-based RL&lt;/h3&gt;</content><author><name>Guangzheng Zhang</name></author><summary type="html">Introduction Content of Post</summary></entry><entry><title type="html">Robust Reinforcement Learning against Observation Perturbation</title><link href="http://localhost:4000/2022/10/06/Robust-RL.html" rel="alternate" type="text/html" title="Robust Reinforcement Learning against Observation Perturbation" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>http://localhost:4000/2022/10/06/Robust-RL</id><content type="html" xml:base="http://localhost:4000/2022/10/06/Robust-RL.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Exemplary applications of Neural Network Certification techniques on Deep Reinforcement Learning.&lt;/p&gt;
 
-&lt;p&gt;Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+&lt;h2 id=&quot;state-observation-perturbation-problem&quot;&gt;State Observation Perturbation Problem&lt;/h2&gt;
 
-&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;
+&lt;h2 id=&quot;certified-defenses&quot;&gt;Certified Defenses&lt;/h2&gt;
 
-&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+&lt;h3 id=&quot;certified-dqn&quot;&gt;Certified DQN&lt;/h3&gt;
+&lt;p&gt;IBP + DQN&lt;/p&gt;
+
+&lt;h3 id=&quot;sa-ppo&quot;&gt;SA-PPO&lt;/h3&gt;
+&lt;p&gt;IBP/CROWN + PPO / DDPG / DQN&lt;/p&gt;
+
+&lt;h3 id=&quot;radial&quot;&gt;RADIAL&lt;/h3&gt;
+
+&lt;h3 id=&quot;crop&quot;&gt;CROP&lt;/h3&gt;
+&lt;p&gt;Randomized smoothing + DQN&lt;/p&gt;</content><author><name>Guangzheng Zhang</name></author><summary type="html">Introduction Exemplary applications of Neural Network Certification techniques on Deep Reinforcement Learning.</summary></entry><entry><title type="html">Neural Network Robustness Certification</title><link href="http://localhost:4000/2022/10/05/NN-rob-cert.html" rel="alternate" type="text/html" title="Neural Network Robustness Certification" /><published>2022-10-05T00:00:00+08:00</published><updated>2022-10-05T00:00:00+08:00</updated><id>http://localhost:4000/2022/10/05/NN-rob-cert</id><content type="html" xml:base="http://localhost:4000/2022/10/05/NN-rob-cert.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Content of Post&lt;/p&gt;
+
+&lt;h3 id=&quot;adversarial-example&quot;&gt;Adversarial Example&lt;/h3&gt;
+
+&lt;h3 id=&quot;adversarial-training&quot;&gt;Adversarial Training&lt;/h3&gt;
+
+&lt;h2 id=&quot;verification&quot;&gt;Verification&lt;/h2&gt;
+
+&lt;h3 id=&quot;complete-vs-incomplete-methods&quot;&gt;Complete VS Incomplete methods&lt;/h3&gt;
+
+&lt;h3 id=&quot;convex-polytope&quot;&gt;Convex Polytope&lt;/h3&gt;
+
+&lt;h3 id=&quot;interval-bound-propagation-ibp&quot;&gt;Interval Bound Propagation (IBP)&lt;/h3&gt;
+
+&lt;h3 id=&quot;fast-lin-crown&quot;&gt;Fast-LIN, CROWN&lt;/h3&gt;
+
+&lt;h2 id=&quot;certified-defenses&quot;&gt;Certified Defenses&lt;/h2&gt;
+
+&lt;h3 id=&quot;ibp&quot;&gt;IBP&lt;/h3&gt;
+
+&lt;h3 id=&quot;crown-ibp&quot;&gt;CROWN-IBP&lt;/h3&gt;</content><author><name>Guangzheng Zhang</name></author><summary type="html">Introduction Content of Post</summary></entry><entry><title type="html">Reinforcement Learning Algorithms</title><link href="http://localhost:4000/2022/10/01/RL-algo.html" rel="alternate" type="text/html" title="Reinforcement Learning Algorithms" /><published>2022-10-01T00:00:00+08:00</published><updated>2022-10-01T00:00:00+08:00</updated><id>http://localhost:4000/2022/10/01/RL-algo</id><content type="html" xml:base="http://localhost:4000/2022/10/01/RL-algo.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This posts introduces preliminary definition of reinforcement learning problem and common algorithms.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-setting&quot;&gt;Problem Setting&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Markov Decision Process(MDP)&lt;/strong&gt; is an object of 5-tuple \(\{S, A, T, R, \gamma \}\) where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(S\):  The state space.&lt;/li&gt;
+  &lt;li&gt;\(A\):  The action space.&lt;/li&gt;
+  &lt;li&gt;\(T\):  The transition probability distribution such that \(s_{t+1} \sim P(s_{t}, a_{t})\) or transition function such that \(s_{t+1} = f(s_{t}, a_{t})\).&lt;/li&gt;
+  &lt;li&gt;\(R\): The reward function \((S, A) \rightarrow \mathbb{R}\)&lt;/li&gt;
+  &lt;li&gt;\(\gamma\): The discount factor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition, a policy is a mapping from state to action chosen by the agent denoted as&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Policy \(\pi: S \rightarrow A\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/RL_overview.jpg&quot; alt=&quot;RL Overview Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Under the setting of reinforcement learning, the transition \(T\) and reward function \(R\) is usually unknown but can be sampled as a black-box.&lt;/p&gt;
+
+&lt;p&gt;The goal of reinforcement learning agent is to learn a policy that maximizes the expected discounted sum of reward. The optimization problem can be described as&lt;/p&gt;
+
+\[\max_\pi \mathbb{E}[\sum_{t=0}^H \gamma^t R(s_t, a_t)] \\
+s_{t+1} \sim P(s_{t}, a_{t}) \\
+a_t \sim \pi(s_t) \\
+s_0 \sim d\]
+
+&lt;h3 id=&quot;relation-to-classical-optimal-control&quot;&gt;Relation to Classical Optimal Control&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Title 1&lt;/th&gt;
-      &lt;th&gt;Title 2&lt;/th&gt;
-      &lt;th&gt;Title 3&lt;/th&gt;
-      &lt;th&gt;Title 4&lt;/th&gt;
+      &lt;th&gt;Transition function&lt;/th&gt;
+      &lt;th&gt;Known&lt;/th&gt;
+      &lt;th&gt;Unknown&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;lorem&lt;/td&gt;
-      &lt;td&gt;lorem ipsum&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;Deterministic&lt;/td&gt;
+      &lt;td&gt;Optimal Control&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;Stochastic&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Reinforcement Learning&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -138,39 +120,204 @@
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Title 1&lt;/th&gt;
-      &lt;th&gt;Title 2&lt;/th&gt;
-      &lt;th&gt;Title 3&lt;/th&gt;
-      &lt;th&gt;Title 4&lt;/th&gt;
+      &lt;th&gt;Reward function&lt;/th&gt;
+      &lt;th&gt;Optimal Control&lt;/th&gt;
+      &lt;th&gt;Reinforcement Learning&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;lorem&lt;/td&gt;
-      &lt;td&gt;lorem ipsum&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
+      &lt;td&gt;Known&lt;/td&gt;
+      &lt;td&gt;Always&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit amet consectetur&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
-      &lt;td&gt;lorem ipsum&lt;/td&gt;
-      &lt;td&gt;lorem&lt;/td&gt;
-      &lt;td&gt;lorem ipsum&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit amet&lt;/td&gt;
-      &lt;td&gt;lorem ipsum dolor sit amet consectetur&lt;/td&gt;
+      &lt;td&gt;Unknown&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Mostly&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>[&quot;Bart Simpson&quot;, &quot;Nelson Mandela Muntz&quot;]</name></author><category term="junk" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2016-05-20T00:00:00+08:00</published><updated>2016-05-20T00:00:00+08:00</updated><id>http://localhost:4000/2016/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2016/05/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Time Domain&lt;/th&gt;
+      &lt;th&gt;Optimal Control&lt;/th&gt;
+      &lt;th&gt;Reinforcement Learning&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Continuous&lt;/td&gt;
+      &lt;td&gt;Mostly&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Discrete&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Always&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;overview-of-rl-algorithms&quot;&gt;Overview of RL Algorithms&lt;/h2&gt;
+
+&lt;p&gt;Reinforcement learning algorithms can be divided through several criteria.&lt;/p&gt;
+
+&lt;h3 id=&quot;model-free-vs-model-based&quot;&gt;Model-free VS Model-based&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Model-free RL&lt;/strong&gt;: Solve the optimazation directly through black-box stochastic optimization techniques. Key components: Value function, policy.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Model-based RL&lt;/strong&gt;: Build and learn an explicit model of the environment i.e. transition function. Then, learn an optimal policy against the estimated model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Advantage&lt;/th&gt;
+      &lt;th&gt;Disadvantage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Model-free&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;High Sample complexity&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Model-based&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Modeling bias&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;continuous-vs-discrete-state-action-space&quot;&gt;Continuous VS Discrete State-Action Space&lt;/h3&gt;
+
+&lt;p&gt;Algorithms for different space setting&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;State \ Action&lt;/th&gt;
+      &lt;th&gt;Discrete&lt;/th&gt;
+      &lt;th&gt;Continuous&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Discrete&lt;/td&gt;
+      &lt;td&gt;Q-Learning&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Continuous&lt;/td&gt;
+      &lt;td&gt;DQN&lt;/td&gt;
+      &lt;td&gt;Policy Gradient&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;List of common policy gradient algorithms:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;VPG&lt;/li&gt;
+  &lt;li&gt;DDPG&lt;/li&gt;
+  &lt;li&gt;TRPO&lt;/li&gt;
+  &lt;li&gt;PPO&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Action space \ Policy&lt;/th&gt;
+      &lt;th&gt;Deterministic&lt;/th&gt;
+      &lt;th&gt;Stochastic&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Discrete&lt;/td&gt;
+      &lt;td&gt;Always&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Continuous&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Mostly&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;on-policy-vs-off-policy&quot;&gt;On-policy VS Off-policy&lt;/h3&gt;
+
+&lt;p&gt;Similar to the distinction between online VS offline estimation algorithms. Differs in the way how generated data is used.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;On-policy: Update policy immediately whenever a new piece of data comes.&lt;/li&gt;
+  &lt;li&gt;Off-policy: Store the generated data from previous run, update using samples from the stored dataset.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;classical-algorithms&quot;&gt;Classical Algorithms&lt;/h2&gt;
+
+&lt;h3 id=&quot;q-learning&quot;&gt;Q-Learning&lt;/h3&gt;
+
+&lt;h3 id=&quot;policy-gradient&quot;&gt;Policy Gradient&lt;/h3&gt;
+
+&lt;h4 id=&quot;deterministic-policy-gradientdpg&quot;&gt;Deterministic Policy Gradient(DPG)&lt;/h4&gt;
+
+&lt;h4 id=&quot;natural-policy-gradientnpo&quot;&gt;Natural Policy Gradient(NPO)&lt;/h4&gt;
+
+&lt;h2 id=&quot;popular-baseline-algorithms&quot;&gt;Popular Baseline Algorithms&lt;/h2&gt;
+
+&lt;p&gt;Here I summarize the most common RL baseline algorithms I have encountered in papers from this recent decade.&lt;/p&gt;
+
+&lt;h3 id=&quot;deep-q-network-dqn&quot;&gt;Deep Q-Network (DQN)&lt;/h3&gt;
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://www.nature.com/articles/nature14236&quot;&gt;Human-level control through deep reinforcement learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A direct extension of Q-Learning that replaces Q-function with Neural Network.&lt;/p&gt;
+
+&lt;p&gt;Define state-action value function as \(Q_\theta: (S, A) \rightarrow \mathbb{R}\) parameterized with \(\theta\).&lt;/p&gt;
+
+&lt;p&gt;Optimizes the temporal different learning objective&lt;/p&gt;
+
+\[\min_\theta ( Q_\theta(s_t, a_t) - (R(s_t) + \gamma \mathbb{E}_{s(t+1)}[\max_a (Q_T(s_{t+1}, a))]))^2\]
+
+&lt;p&gt;where \(Q_T\) is the target network fixed during some update period.&lt;/p&gt;
+
+&lt;p&gt;Additionally, an Experience-Replay buffer is used that strongly improves empirical performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;deep-deterministic-policy-gradient-ddpg&quot;&gt;Deep Deterministic Policy Gradient (DDPG)&lt;/h3&gt;
+
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://arxiv.org/abs/1509.02971&quot;&gt;Continuous control with deep reinforcement learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A direct extension of DPG.&lt;/p&gt;
+
+&lt;p&gt;A representative example of Actor-Critic Framework.&lt;/p&gt;
+
+&lt;h3 id=&quot;trust-region-policy-optimization-trpo&quot;&gt;Trust Region Policy Optimization (TRPO)&lt;/h3&gt;
+
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://arxiv.org/abs/1502.05477&quot;&gt;Trust Region Policy Optimization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Extended from NPO. Constrained Optimization of importance sampling objective.&lt;/p&gt;
+
+&lt;h3 id=&quot;proximal-policy-optimization-ppo&quot;&gt;Proximal Policy Optimization (PPO)&lt;/h3&gt;
+
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://arxiv.org/abs/1707.06347&quot;&gt;Proximal Policy Optimization Algorithms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A refinement of TRPO that removed constraints but used a likelihood ratio clipping technique.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-baselines&quot;&gt;Other Baselines&lt;/h2&gt;
+
+&lt;h3 id=&quot;asynchronous-advantage-actor-critica3c&quot;&gt;Asynchronous Advantage Actor-Critic(A3C)&lt;/h3&gt;
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://arxiv.org/abs/1602.01783&quot;&gt;Asynchronous Methods for Deep Reinforcement Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Distributed extension of actor-critic framework.&lt;/p&gt;
+
+&lt;h3 id=&quot;soft-actor-criticsac&quot;&gt;Soft Actor-Critic(SAC)&lt;/h3&gt;
+&lt;p&gt;Original Paper: &lt;a href=&quot;https://arxiv.org/abs/1801.01290&quot;&gt;Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An extension of actor-critic framework that introduces using entropy-regularization term.&lt;/p&gt;</content><author><name>Guangzheng Zhang</name></author><summary type="html">Introduction This posts introduces preliminary definition of reinforcement learning problem and common algorithms.</summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2016-05-20T00:00:00+08:00</published><updated>2016-05-20T00:00:00+08:00</updated><id>http://localhost:4000/2016/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2016/05/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -184,4 +331,4 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Some articles are just so short that we have to make the footer stick</title><link href="http://localhost:4000/misc/2016/05/19/super-short-article.html" rel="alternate" type="text/html" title="Some articles are just so short that we have to make the footer stick" /><published>2016-05-19T00:00:00+08:00</published><updated>2016-05-19T00:00:00+08:00</updated><id>http://localhost:4000/misc/2016/05/19/super-short-article</id><content type="html" xml:base="http://localhost:4000/misc/2016/05/19/super-short-article.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</content><author><name>GitHub User</name><email>your-email@domain.com</email></author><category term="misc" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Guangzheng Zhang</name><email>zgzhikaru97@gmail.com</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>

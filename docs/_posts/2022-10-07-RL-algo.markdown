@@ -1,0 +1,163 @@
+---
+layout: post
+usemathjax: true
+title:  "Reinforcement Learning Algorithms"
+author: Guangzheng Zhang
+date: 22-10-01
+---
+
+## Introduction
+This posts introduces preliminary definition of reinforcement learning problem and common algorithms. 
+
+## Problem Setting
+A **Markov Decision Process(MDP)** is an object of 5-tuple $$\{S, A, T, R, \gamma \}$$ where
+* $$S$$:  The state space. 
+* $$A$$:  The action space. 
+* $$T$$:  The transition probability distribution such that $$s_{t+1} \sim P(s_{t}, a_{t})$$ or transition function such that $$s_{t+1} = f(s_{t}, a_{t})$$. 
+* $$R$$: The reward function $$ (S, A) \rightarrow \mathbb{R}$$
+* $$\gamma$$: The discount factor. 
+
+In addition, a policy is a mapping from state to action chosen by the agent denoted as
+* Policy $$\pi: S \rightarrow A$$ 
+
+
+![RL Overview Diagram](/assets/RL_overview.jpg)
+
+Under the setting of reinforcement learning, the transition $$T$$ and reward function $$R$$ is usually unknown but can be sampled as a black-box. 
+
+The goal of reinforcement learning agent is to learn a policy that maximizes the expected discounted sum of reward. The optimization problem can be described as
+
+$$
+\max_\pi \mathbb{E}[\sum_{t=0}^H \gamma^t R(s_t, a_t)] \\
+s_{t+1} \sim P(s_{t}, a_{t}) \\
+a_t \sim \pi(s_t) \\
+s_0 \sim d
+$$
+
+### Relation to Classical Optimal Control 
+
+| Transition function  | Known | Unknown |
+|---|--------|---------|
+| Deterministic | Optimal Control | |
+| Stochastic |  | Reinforcement Learning |
+
+| Reward function  | Optimal Control | Reinforcement Learning |
+|---|--------|---------|
+| Known | Always | |
+| Unknown |  | Mostly |
+
+| Time Domain  | Optimal Control | Reinforcement Learning |
+|---|--------|---------|
+| Continuous  | Mostly | |
+| Discrete | | Always |
+
+
+## Overview of RL Algorithms
+
+Reinforcement learning algorithms can be divided through several criteria. 
+
+### Model-free VS Model-based
+
+* **Model-free RL**: Solve the optimazation directly through black-box stochastic optimization techniques. Key components: Value function, policy.
+* **Model-based RL**: Build and learn an explicit model of the environment i.e. transition function. Then, learn an optimal policy against the estimated model. 
+
+|   | Advantage | Disadvantage |
+|---|--------|---------|
+| Model-free |  | High Sample complexity |
+| Model-based |  | Modeling bias |
+
+
+### Continuous VS Discrete State-Action Space
+
+Algorithms for different space setting
+
+| State \ Action  | Discrete | Continuous |
+|---|--------|---------|
+| Discrete | Q-Learning |  |
+| Continuous | DQN |  Policy Gradient |
+
+
+List of common policy gradient algorithms: 
+* VPG
+* DDPG
+* TRPO
+* PPO
+
+
+| Action space \ Policy  | Deterministic | Stochastic |
+|---|--------|---------|
+| Discrete | Always |  |
+| Continuous |  |  Mostly |
+
+### On-policy VS Off-policy
+
+Similar to the distinction between online VS offline estimation algorithms. Differs in the way how generated data is used. 
+* On-policy: Update policy immediately whenever a new piece of data comes. 
+* Off-policy: Store the generated data from previous run, update using samples from the stored dataset. 
+
+
+## Classical Algorithms
+
+### Q-Learning 
+
+
+### Policy Gradient
+
+#### Deterministic Policy Gradient(DPG)
+
+#### Natural Policy Gradient(NPO)
+
+
+## Popular Baseline Algorithms
+
+Here I summarize the most common RL baseline algorithms I have encountered in papers from this recent decade.
+
+### Deep Q-Network (DQN)
+Original Paper: [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
+
+A direct extension of Q-Learning that replaces Q-function with Neural Network. 
+
+Define state-action value function as $$Q_\theta: (S, A) \rightarrow \mathbb{R}$$ parameterized with $$\theta$$.
+
+Optimizes the temporal different learning objective
+
+$$
+\min_\theta ( Q_\theta(s_t, a_t) - (R(s_t) + \gamma \mathbb{E}_{s(t+1)}[\max_a (Q_T(s_{t+1}, a))]))^2
+$$
+
+where $$Q_T$$ is the target network fixed during some update period. 
+
+Additionally, an Experience-Replay buffer is used that strongly improves empirical performance. 
+
+### Deep Deterministic Policy Gradient (DDPG)
+
+Original Paper: [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)
+
+A direct extension of DPG. 
+
+A representative example of Actor-Critic Framework. 
+
+### Trust Region Policy Optimization (TRPO)
+
+Original Paper: [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
+
+Extended from NPO. Constrained Optimization of importance sampling objective.
+
+### Proximal Policy Optimization (PPO)
+
+Original Paper: [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+
+A refinement of TRPO that removed constraints but used a likelihood ratio clipping technique. 
+
+
+## Other Baselines
+
+### Asynchronous Advantage Actor-Critic(A3C)
+Original Paper: [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/abs/1602.01783)
+
+Distributed extension of actor-critic framework.
+
+### Soft Actor-Critic(SAC)
+Original Paper: [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](https://arxiv.org/abs/1801.01290)
+
+An extension of actor-critic framework that introduces using entropy-regularization term. 

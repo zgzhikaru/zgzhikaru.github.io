@@ -1,0 +1,25 @@
+---
+layout: post
+usemathjax: true
+title:  "Robust Reinforcement Learning against Observation Perturbation"
+author: Guangzheng Zhang
+date: 22-10-06
+---
+
+## Introduction
+Exemplary applications of Neural Network Certification techniques on Deep Reinforcement Learning. 
+
+## State Observation Perturbation Problem
+
+## Certified Defenses
+
+### Certified DQN
+IBP + DQN
+
+### SA-PPO
+IBP/CROWN + PPO / DDPG / DQN
+
+### RADIAL
+
+### CROP
+Randomized smoothing + DQN

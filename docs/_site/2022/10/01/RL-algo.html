@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reinforcement Learning Algorithms | Guangzheng’s Research Blogs</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Reinforcement Learning Algorithms" />
+<meta name="author" content="Guangzheng Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction This posts introduces preliminary definition of reinforcement learning problem and common algorithms." />
+<meta property="og:description" content="Introduction This posts introduces preliminary definition of reinforcement learning problem and common algorithms." />
+<link rel="canonical" href="http://localhost:4000/2022/10/01/RL-algo.html" />
+<meta property="og:url" content="http://localhost:4000/2022/10/01/RL-algo.html" />
+<meta property="og:site_name" content="Guangzheng’s Research Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-01T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reinforcement Learning Algorithms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Guangzheng Zhang"},"dateModified":"2022-10-01T00:00:00+08:00","datePublished":"2022-10-01T00:00:00+08:00","description":"Introduction This posts introduces preliminary definition of reinforcement learning problem and common algorithms.","headline":"Reinforcement Learning Algorithms","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2022/10/01/RL-algo.html"},"url":"http://localhost:4000/2022/10/01/RL-algo.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Guangzheng&apos;s Research Blogs" />
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  
+  
+</head>
+
+
+  <body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Guangzheng&#39;s Research Blogs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Reinforcement Learning Algorithms</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-10-01T00:00:00+08:00" itemprop="datePublished">
+        Oct 1, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Guangzheng Zhang</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="introduction">Introduction</h2>
+<p>This posts introduces preliminary definition of reinforcement learning problem and common algorithms.</p>
+
+<h2 id="problem-setting">Problem Setting</h2>
+<p>A <strong>Markov Decision Process(MDP)</strong> is an object of 5-tuple \(\{S, A, T, R, \gamma \}\) where</p>
+<ul>
+  <li>\(S\):  The state space.</li>
+  <li>\(A\):  The action space.</li>
+  <li>\(T\):  The transition probability distribution such that \(s_{t+1} \sim P(s_{t}, a_{t})\) or transition function such that \(s_{t+1} = f(s_{t}, a_{t})\).</li>
+  <li>\(R\): The reward function \((S, A) \rightarrow \mathbb{R}\)</li>
+  <li>\(\gamma\): The discount factor.</li>
+</ul>
+
+<p>In addition, a policy is a mapping from state to action chosen by the agent denoted as</p>
+<ul>
+  <li>Policy \(\pi: S \rightarrow A\)</li>
+</ul>
+
+<p><img src="/assets/RL_overview.jpg" alt="RL Overview Diagram" /></p>
+
+<p>Under the setting of reinforcement learning, the transition \(T\) and reward function \(R\) is usually unknown but can be sampled as a black-box.</p>
+
+<p>The goal of reinforcement learning agent is to learn a policy that maximizes the expected discounted sum of reward. The optimization problem can be described as</p>
+
+\[\max_\pi \mathbb{E}[\sum_{t=0}^H \gamma^t R(s_t, a_t)] \\
+s_{t+1} \sim P(s_{t}, a_{t}) \\
+a_t \sim \pi(s_t) \\
+s_0 \sim d\]
+
+<h3 id="relation-to-classical-optimal-control">Relation to Classical Optimal Control</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transition function</th>
+      <th>Known</th>
+      <th>Unknown</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Deterministic</td>
+      <td>Optimal Control</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Stochastic</td>
+      <td> </td>
+      <td>Reinforcement Learning</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reward function</th>
+      <th>Optimal Control</th>
+      <th>Reinforcement Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Known</td>
+      <td>Always</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td> </td>
+      <td>Mostly</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time Domain</th>
+      <th>Optimal Control</th>
+      <th>Reinforcement Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Continuous</td>
+      <td>Mostly</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Discrete</td>
+      <td> </td>
+      <td>Always</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="overview-of-rl-algorithms">Overview of RL Algorithms</h2>
+
+<p>Reinforcement learning algorithms can be divided through several criteria.</p>
+
+<h3 id="model-free-vs-model-based">Model-free VS Model-based</h3>
+
+<ul>
+  <li><strong>Model-free RL</strong>: Solve the optimazation directly through black-box stochastic optimization techniques. Key components: Value function, policy.</li>
+  <li><strong>Model-based RL</strong>: Build and learn an explicit model of the environment i.e. transition function. Then, learn an optimal policy against the estimated model.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Advantage</th>
+      <th>Disadvantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Model-free</td>
+      <td> </td>
+      <td>High Sample complexity</td>
+    </tr>
+    <tr>
+      <td>Model-based</td>
+      <td> </td>
+      <td>Modeling bias</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="continuous-vs-discrete-state-action-space">Continuous VS Discrete State-Action Space</h3>
+
+<p>Algorithms for different space setting</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>State \ Action</th>
+      <th>Discrete</th>
+      <th>Continuous</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Discrete</td>
+      <td>Q-Learning</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Continuous</td>
+      <td>DQN</td>
+      <td>Policy Gradient</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>List of common policy gradient algorithms:</p>
+<ul>
+  <li>VPG</li>
+  <li>DDPG</li>
+  <li>TRPO</li>
+  <li>PPO</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action space \ Policy</th>
+      <th>Deterministic</th>
+      <th>Stochastic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Discrete</td>
+      <td>Always</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Continuous</td>
+      <td> </td>
+      <td>Mostly</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="on-policy-vs-off-policy">On-policy VS Off-policy</h3>
+
+<p>Similar to the distinction between online VS offline estimation algorithms. Differs in the way how generated data is used.</p>
+<ul>
+  <li>On-policy: Update policy immediately whenever a new piece of data comes.</li>
+  <li>Off-policy: Store the generated data from previous run, update using samples from the stored dataset.</li>
+</ul>
+
+<h2 id="classical-algorithms">Classical Algorithms</h2>
+
+<h3 id="q-learning">Q-Learning</h3>
+
+<h3 id="policy-gradient">Policy Gradient</h3>
+
+<h4 id="deterministic-policy-gradientdpg">Deterministic Policy Gradient(DPG)</h4>
+
+<h4 id="natural-policy-gradientnpo">Natural Policy Gradient(NPO)</h4>
+
+<h2 id="popular-baseline-algorithms">Popular Baseline Algorithms</h2>
+
+<p>Here I summarize the most common RL baseline algorithms I have encountered in papers from this recent decade.</p>
+
+<h3 id="deep-q-network-dqn">Deep Q-Network (DQN)</h3>
+<p>Original Paper: <a href="https://www.nature.com/articles/nature14236">Human-level control through deep reinforcement learning</a></p>
+
+<p>A direct extension of Q-Learning that replaces Q-function with Neural Network.</p>
+
+<p>Define state-action value function as \(Q_\theta: (S, A) \rightarrow \mathbb{R}\) parameterized with \(\theta\).</p>
+
+<p>Optimizes the temporal different learning objective</p>
+
+\[\min_\theta ( Q_\theta(s_t, a_t) - (R(s_t) + \gamma \mathbb{E}_{s(t+1)}[\max_a (Q_T(s_{t+1}, a))]))^2\]
+
+<p>where \(Q_T\) is the target network fixed during some update period.</p>
+
+<p>Additionally, an Experience-Replay buffer is used that strongly improves empirical performance.</p>
+
+<h3 id="deep-deterministic-policy-gradient-ddpg">Deep Deterministic Policy Gradient (DDPG)</h3>
+
+<p>Original Paper: <a href="https://arxiv.org/abs/1509.02971">Continuous control with deep reinforcement learning</a></p>
+
+<p>A direct extension of DPG.</p>
+
+<p>A representative example of Actor-Critic Framework.</p>
+
+<h3 id="trust-region-policy-optimization-trpo">Trust Region Policy Optimization (TRPO)</h3>
+
+<p>Original Paper: <a href="https://arxiv.org/abs/1502.05477">Trust Region Policy Optimization</a></p>
+
+<p>Extended from NPO. Constrained Optimization of importance sampling objective.</p>
+
+<h3 id="proximal-policy-optimization-ppo">Proximal Policy Optimization (PPO)</h3>
+
+<p>Original Paper: <a href="https://arxiv.org/abs/1707.06347">Proximal Policy Optimization Algorithms</a></p>
+
+<p>A refinement of TRPO that removed constraints but used a likelihood ratio clipping technique.</p>
+
+<h2 id="other-baselines">Other Baselines</h2>
+
+<h3 id="asynchronous-advantage-actor-critica3c">Asynchronous Advantage Actor-Critic(A3C)</h3>
+<p>Original Paper: <a href="https://arxiv.org/abs/1602.01783">Asynchronous Methods for Deep Reinforcement Learning</a></p>
+
+<p>Distributed extension of actor-critic framework.</p>
+
+<h3 id="soft-actor-criticsac">Soft Actor-Critic(SAC)</h3>
+<p>Original Paper: <a href="https://arxiv.org/abs/1801.01290">Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor</a></p>
+
+<p>An extension of actor-critic framework that introduces using entropy-regularization term.</p>
+
+  </div><a class="u-url" href="/2022/10/01/RL-algo.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <!--
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        -->
+        <ul class="contact-list">
+          <li class="p-name">Guangzheng Zhang</li>
+          <li><a class="u-email" href="mailto:zgzhikaru97@gmail.com">zgzhikaru97@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/zgzhikaru" target="_blank" title="zgzhikaru"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
+<!--
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
